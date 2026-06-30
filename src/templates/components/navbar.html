@@ -3,17 +3,22 @@
 
 <nav class="navbar">
     <div class="navbar-container">
-        <a href="" class="navbar-brand">Rahmatullayev.uz</a>
+        <a href="" class="navbar-brand">rahmatullayev.uz</a>
         <ul class="navbar-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a class="{% if request.resolver_match.url_name == 'home' %} active {% endif %}"
+                    href="{% url 'home' %}">Asosiy</a></li>
+            <li><a class="{% if request.resolver_match.url_name == 'projects' %} active {% endif %}"
+                    href="{% url 'projects' %}">Loyihalar</a></li>
+            <li><a class="{% if request.resolver_match.url_name == 'blog' %} active {% endif %}"
+                    href="{% url 'blog' %}">Blog</a></li>
+            <li><a class="{% if request.resolver_match.url_name == 'contact' %} active {% endif %}"
+                    href="{% url 'contact' %}">Aloqa</a>
+            </li>
         </ul>
         <ul class="navbar-lang">
             <li><a href="">O'zb</a></li>
-            <li><a href="">Eng</a></li>
-            <li><a href="">Rus</a></li>
+            <!-- <li><a href="">Eng</a></li>
+            <li><a href="">Rus</a></li> -->
         </ul>
     </div>
 </nav>

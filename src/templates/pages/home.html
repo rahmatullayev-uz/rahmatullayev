@@ -1,7 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+{% endblock %}
 
 {% block content %}
-
-<h1>Asosiy sahifa</h1>
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="title-badge">Ish uchun ochiq</div>
+        <h1 class="hero-title">Sardor Rahmatullayev</h1>
+        <p class="hero-subtitle">Software Engineer & SMM Manager</p>
+        <p class="hero-about">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, laborum sit. Enim delectus provident ex ut
+            ducimus, soluta doloribus sapiente.
+        </p>
+        <div class="hero-actions">
+            <button>
+                Bog'lanish
+            </button>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

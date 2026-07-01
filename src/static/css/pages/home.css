@@ -1,0 +1,41 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 12px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.title-badge {
+    background-color: #f1f1f1;
+    width: fit-content;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #7d41e1;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 5px 15px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-family: "Ubuntu";
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+}
+
+.hero-actions button {
+    font-size: 2rem;
+}

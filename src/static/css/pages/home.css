@@ -141,10 +141,8 @@
 
 /* Skill-me section */
 .skills-me {
-    display: flex;
-    /* flex-direction: column; */
+    display: grid;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .skills-me-container {

@@ -1,5 +1,46 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %} {% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/pages/projects.css' %}" />
+{% endblock %} {% block content %}
 
-{% block content %}
-<h1>Loyihalar</h1>
+<section class="projects-section">
+  <div class="container">
+    <h2 class="projects-title">Loyihalar</h2>
+    <div class="projects-list">
+      {% for project in project_list %}
+      <div class="project-card">
+        <figure>
+          {% if project.image != none %}
+          <img
+            src="{{ project.image }}"
+            alt="{{ project.title }}"
+            class="project-img-box"
+          />
+          {% else %}
+          <img
+            src="https://placehold.co/600x400?text=404"
+            alt="Rasm mavjud emas"
+            class="project-img-box"
+          />
+          {% endif %}
+        </figure>
+        <div>
+          <h2 class="project-card-title">{{ project.title }}</h2>
+          <p class="project-card-subtitle">{{ project.subtitle }}</p>
+        </div>
+        <div class="project-card-actions">
+          <a href="{{ project.demo }}" target="_blank"
+            ><i class="fa-solid fa-play"></i> Demo</a
+          >
+          <a href="{{ project.github }}" target="_blank"
+            ><i class="fa-brands fa-github"></i> GitHub</a
+          >
+        </div>
+      </div>
+      {% empty %}
+      <h2 class="text-center text-white">Loyihalar mavjud emas!</h2>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% endblock %}

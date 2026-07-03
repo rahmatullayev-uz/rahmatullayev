@@ -6,7 +6,33 @@ def home(request):
 
 
 def projects(request):
-    return render(request, "pages/projects.html")
+    datas = [
+        {
+            'title': "AmmoCRM",
+            'subtitle': "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo omnis, nam inventore cupiditate distinctio vero fuga veniam repudiandae voluptatem libero id quisquam adipisci nihil velit eos! Odit ipsam ea maiores!",
+            'demo': "https://t.me/telegram",
+            'github': "https://github.com/rahmatullayev_dev",
+            'image': None
+        },
+        {
+            'title': "Kino Bot",
+            'subtitle': "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo omnis, nam inventore cupiditate distinctio vero fuga veniam repudiandae voluptatem libero id quisquam adipisci nihil velit eos! Odit ipsam ea maiores!",
+            'demo': "https://t.me/telegram",
+            'github': "https://github.com/rahmatullayev_dev",
+            'image': None
+        },
+        {
+            'title': "OLX Clone",
+            'subtitle': "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo omnis, nam inventore cupiditate distinctio vero fuga veniam repudiandae voluptatem libero id quisquam adipisci nihil velit eos! Odit ipsam ea maiores!",
+            'demo': "https://t.me/telegram",
+            'github': "https://github.com/rahmatullayev_dev",
+            'image': None
+        },
+    ]
+    context = {
+        'project_list': datas
+    }
+    return render(request, "pages/projects.html", context)
 
 
 def blog(request):
